@@ -1,6 +1,6 @@
 // business logic
 var vowels = ["a", "e", "i", "o", "u"]
-
+var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 
 
 
@@ -14,17 +14,28 @@ $(document).ready(function() {
     var input = $("input#userinput").val();
     var inputArray = input.split(" ");
     var transformedArray = [];
-    console.log(inputArray);
+
+    inputArray.forEach(function(word) {
+      if (vowels.includes(word.charAt(0))) {
+        transformedArray.push(word + "way")
+      } else if (consonants.includes(word.charAt(0))) {
+        transformedArray.push(word.slice(1) + word.charAt(0) + "ay")
+      } else {
+      alert("nope")
+      }
+    });
+    console.log(transformedArray);
 
 
-    // inputArray.forEach(function(word) {
-    //   if (vowels.includes(word.charAt(0))) {
-    //     transformedArray.push(word + "way")
-    //   } else
-    // });
+
+
+
+
     // for (var i = 0; i < input.length(); i++) {
     //
     // }
-    // input.indexOf()
+
+
+
   });
 });
