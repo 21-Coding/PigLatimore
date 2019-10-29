@@ -1,0 +1,12 @@
+.latinpig {
+  width: 300px;
+border: 15px solid grey;
+padding: 50px;
+margin: 20px;
+
+}
+
+h3 {
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
